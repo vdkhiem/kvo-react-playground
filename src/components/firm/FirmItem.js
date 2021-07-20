@@ -1,11 +1,14 @@
+import React, { useState } from 'react'; //useState is react hook 
+
 function FirmItem(props) {
-    let title = props.title;
+    const [title, setTitle] = useState(props.title); // set default value to state
+    console.log('The firm item is evaluted');
 
     function addHandler() {
-        title = 'Updated';
-        console.log('Add new firm item')
+        setTitle('Khiem');
+        console.log(title);
     }
-    
+
     return (
         <div>
             This is firm item {title}
